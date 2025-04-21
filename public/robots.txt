@@ -1,0 +1,4 @@
+Host: https://www.perkemahanbedengan.com
+
+User-agent: *
+Allow: /
