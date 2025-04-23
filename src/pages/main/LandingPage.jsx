@@ -53,7 +53,7 @@ const LandingPage = () => {
                     <div 
                          className={`relative flex flex-col items-center lg:items-start justify-center lg: gap-5 w-72 lg:w-fit text-white h-full z-10 transition-opacity duration-1000 'opacity-100' : 'opacity-0'}`}>
                         <h1 className='text-primary font-semibold text-3xl lg:text-4xl'>
-                            Selamat Datang di<br/>Bumi Perkemahan Bedengan
+                            Selamat Datang di<br/>Bumi Perkemahan Bedengan TETSTSTST
                         </h1>
                         <p className='text-primary text-sm lg:text-lg'>
                             Temukan kedamaian dan keindahan alam di jantung Bedengan dengan<br/> pengalaman berkemah
