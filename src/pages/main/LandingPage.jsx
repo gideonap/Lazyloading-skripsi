@@ -45,7 +45,6 @@ const LandingPage = () => {
 
     return (
         <div>
-            <Suspense fallback={<div>Memuat Navbar...</div>}></Suspense>
             <Navbar/>
             <div className='flex flex-col gap-16'>
                 <div
