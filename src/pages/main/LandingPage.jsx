@@ -13,8 +13,6 @@ const Footer = lazy(() => import("../../components/Footer"));
 const Button = lazy(() => import("../../components/Button"));
 const Card = lazy(() => import("../../components/Card"));
 
-// --- Helper component for lazy loading sections ---
-// This makes the implementation cleaner below
 const LazySection = ({
   children,
   options = { triggerOnce: true, threshold: 0.1 },
@@ -78,11 +76,10 @@ const LandingPage = () => {
   // }, [])
 
   return (
-    // Suspense needed for lazy-loaded Navbar and Footer
     <Suspense fallback={<div>Loading Page...</div>}>
         <Navbar />
         <div className='flex flex-col gap-16'>
-            {/* Section 1: Hero - Load immediately */}
+            {/* Section 1: Hero - Load langsung */}
             <div
                 className="relative flex flex-col bg-[url('/images/background.JPG')] bg-cover bg-center h-screen w-screen lg:w-auto px-10 lg:pl-28 lg:pr-[25rem]">
                 <div className="absolute inset-0 bg-black opacity-60"></div>
@@ -104,7 +101,7 @@ const LandingPage = () => {
             </div>
 
             <div className='flex flex-col gap-24'>
-                {/* Section 2: Warmth */}
+                {/* Section 2: Desc */}
                 <LazySection>
                     <div className='flex flex-col gap-8 items-center'>
                         <div className='flex flex-col gap-2 items-center text-center'>
@@ -223,14 +220,11 @@ const LandingPage = () => {
                     </div>
                 </LazySection>
 
-                {/* Section 6: CTA */}
-                 {/* For background images, actual lazy loading is harder. */}
-                 {/* We rely on the content fading in. */}
+                {/* Section 6 */}
                  <LazySection>
                      <div
                         className="relative flex bg-[url('/images/background.JPG')] bg-cover bg-center min-h-[50vh] w-screen lg:w-auto place-content-center items-center">
                         <div className='absolute inset-0 bg-black opacity-60'></div>
-                         {/* Content inside fades in */}
                          <div className={`relative flex flex-col lg:flex-row lg:justify-between gap-7 lg:gap-0 items-center lg:items-center w-full px-14 lg:px-28`}>
                             <h1 className='text-lg lg:text-3xl text-white font-semibold w-56 max-w-full lg:w-[35rem] lg:max-w-[35rem]'>Sudah
                                 siap menikmati keindahan hutan pinus?</h1>
@@ -255,7 +249,7 @@ const LandingPage = () => {
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.0963541431142!2d112.52960455654726!3d-7.939746304651023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7883de82b88e3b%3A0xef56b8f39f00d6e0!2sBedengan%20Camping%20Ground!5e0!3m2!1sen!2sid!4v1723107890524!5m2!1sen!2sid"
                                 className="rounded-lg h-56 lg:h-72 w-[17rem] lg:w-[29rem]"
                                 allowFullScreen=""
-                                loading="lazy" // Native lazy loading for iframe
+                                loading="lazy"
                                 title="Bedengan Camping Ground Map"></iframe>
                             <div className='flex flex-col gap-9'>
                                 <div className='flex flex-col gap-3 justify-start lg:pr-20'>
@@ -315,7 +309,7 @@ const LandingPage = () => {
             </div>
         </div>
         <Footer className='mt-20' />
-    </Suspense> // Close Suspense boundary
+    </Suspense>
 );
 };
 
