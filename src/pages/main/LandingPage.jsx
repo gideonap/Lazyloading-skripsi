@@ -1,5 +1,4 @@
 import React, { useEffect, useState, Suspense, lazy } from "react";
-// import {Button, Card, Footer, Navbar} from '../../components/index'
 import { useInView } from "react-intersection-observer";
 import { MdOutlineMosque, MdOutlineShoppingBag } from "react-icons/md";
 import { IoMdMan, IoMdWoman } from "react-icons/io";
@@ -66,14 +65,6 @@ const cardData = [
 ];
 
 const LandingPage = () => {
-  // const [perlengkapans, setPerlengkapans] = useState([])
-
-  // useEffect(() => {
-  //     getAllPerlengkapan(localStorage.getItem("token"))
-  //         .then((response) => {
-  //             console.log(response)
-  //         })
-  // }, [])
 
   return (
     <Suspense fallback={<div>Loading Page...</div>}>
